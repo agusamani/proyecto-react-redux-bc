@@ -1,0 +1,1 @@
+export const baseURL = 'https://tuc-ui-bootcamp-2019.herokuapp.com';

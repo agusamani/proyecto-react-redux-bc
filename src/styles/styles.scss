@@ -1,0 +1,159 @@
+* {
+    font-family: 'Source Sans Pro', sans-serif;
+  }  
+
+/**
+Header
+**/
+
+.nav-wrapper {
+    background-color: rgb(247, 247, 247)!important;
+
+    .brand-logo {
+        color: black;
+        font-size: 18px;
+        padding-left: 15px;
+    }
+
+    li {
+        color: #FE8A24;
+        font-weight: bold;
+        padding-right: 20px;
+    }
+}
+
+
+/**
+Home
+**/
+
+.home-container {
+    padding: 25px 20px 25px 20px;
+    border: 1px solid #ECECEB;
+
+}
+/**
+RecipesContainer
+**/
+
+.recipes-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 5%;
+    border: 1px solid #ECECEB;
+}
+
+/**
+Recipes
+**/
+
+.card {
+
+    height: 350px;
+
+    &-container__content {
+        padding: 7px;
+
+
+    }
+
+    &-container__title {
+        padding-left: 5px;
+    }
+
+    &-container__chef {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        border-top: 1px solid #e6e6e6;
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        color: grey;
+        padding-top: .5em;
+        padding-left: 10px;
+    }
+
+    &-image-recipe {
+        width:100%;
+        height: 118px;
+    }
+
+    &-image-chef {
+        width: 2.5rem;
+        border-radius: 50%;
+    }
+
+    .box-rating-prep {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 5px 5px 0 5px;
+
+        .prep-time {
+            padding: 0 20% 0 25px;
+            border-left: 1px solid #e6e6e6;
+        }
+    }
+
+}
+
+/**
+IngredientsContainer
+**/
+
+.ingredients-container {
+    display:flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    border: 1px solid #ECECEB;
+
+}
+
+
+
+
+
+/**
+Ingredients
+**/
+
+.ingredients-item {
+    width: auto;
+    text-align: center;
+    margin: 1rem;
+
+    img{
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+/**
+Ingredient
+**/
+
+
+.ingredient-container {
+    border: 1px solid #ECECEB;
+
+    &__inner {
+
+        padding: 0 30px 8px 30px;
+    }
+
+    img {
+        width: 100%;
+        height: 400px;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+}
