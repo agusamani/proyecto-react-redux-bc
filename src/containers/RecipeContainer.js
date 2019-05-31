@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import * as actions from '../redux/actions';
 import '../styles/styles.scss';
 import { bindActionCreators } from 'redux';
-import Recipe from '../components/Recipe';
+import RecipeDetail from '../components/RecipeDetail';
 
 
 
@@ -20,7 +20,7 @@ class RecipeContainer extends React.Component {
     render() {
         return (
             <div>
-                <Recipe 
+                <RecipeDetail
                   rating={this.props.recipe.rating}
                   prep_time={this.props.recipe.prep_time}
                   title={this.props.recipe.title}

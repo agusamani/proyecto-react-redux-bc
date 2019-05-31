@@ -2,9 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions from '../redux/actions';
-import Loading from '../components/Loading';
 import '../styles/styles.scss';
 import Ingredients from '../components/Ingredients';
+import Spinner from 'react-spinner-material';
 
 
 
@@ -19,11 +19,11 @@ class IngredientsContainer extends React.Component {
     render() {
         return (
             <div className="ingredients-container">
-              {this.props.loading ? <Loading /> : 
+              {this.props.loading ? <Spinner size={80} spinnerColor={"#333"} spinnerWidth={2} visible={true} /> : 
                  this.props.ingredients.map( (item) => <Ingredients 
                                                           key={item.id} 
                                                           {...item} 
-                                                        />)}
+                                                         />)}
             </div>
         )
     }

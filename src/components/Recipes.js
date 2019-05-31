@@ -3,11 +3,19 @@ import { Link } from 'react-router-dom';
 
 
 const Recipes = ({title, prep_time, rating, chef, main_image, id }) => {
+
+  const img =  main_image && main_image.url ? main_image.url : null;
+  const chefFullName = chef && chef.full_name ? chef.full_name : null;
+  // const imageChef = chef && chef.image ? chef.image : null;
+  // const chefPhoto = imageChef && imageChef.url ? imageChef.url : null;
+  // const cheff = chefPhoto ? chefPhoto : null; 
+  
+
     return (
         
         <div className="card">
           <Link to={`/recipes/${id}`}>
-            <img className="card-image-recipe" alt={title} src={main_image.url} />
+            <img className="card-image-recipe" alt={title} src={img} />
           </Link>
           <div className="card-container">
            <div className="card-container__title">{title}</div>
@@ -19,7 +27,7 @@ const Recipes = ({title, prep_time, rating, chef, main_image, id }) => {
                <p>This is a preview Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit...</p>
              </div>
              <div className="card-container__chef">
-               <img className="card-image-chef" alt={chef.full_name} src={chef.image.url} />  By {chef.full_name}
+               <img className="card-image-chef" alt={chefFullName} src={chef.image.url} />  By {chefFullName}
              </div>
           </div>
         </div>

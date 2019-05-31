@@ -4,6 +4,7 @@ import * as actions from '../redux/actions';
 import '../styles/styles.scss';
 import { bindActionCreators } from 'redux';
 import Image from '../assets/images/no-photo.jpg';
+import Recipes from './Recipes';
 
 
 class Ingredient extends React.Component {
@@ -25,6 +26,9 @@ class Ingredient extends React.Component {
                   <h2>{this.props.ingredient.name}</h2>
                   <div>
                       <h3>Recipes:</h3>
+                  </div>
+                  <div>
+                      {/* {this.props.ingredient.recipes && this.props.ingredient.recipes.map( (item) => <Recipes key={item.id} {...item} />)} */}
                   </div>
                 </div>
             </div>

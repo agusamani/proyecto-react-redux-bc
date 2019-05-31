@@ -10,7 +10,7 @@ Header
     background-color: rgb(247, 247, 247);
     display: flex;
     justify-content: space-between;
-    height: 3rem;
+    height: 3.5rem;
     align-items: center;
 
     &__home {
@@ -159,17 +159,86 @@ Ingredient
         padding: 8px 30px 8px 20px;
     }
 
-    &__img {
-        width: 100%;
+    img {
         height: 400px;
+        width: 888px;
     }
 
     h2 {
         font-size: 2.5rem;
+        font-weight: 100;
     }
 
     h3 {
         font-weight: bold;
         font-size: 1.5rem;
+    }
+}
+
+
+
+/**
+Recipe
+**/
+
+
+.container-recipe {
+
+    &__inner {
+
+        padding: 0 20px 0 20px;
+    }
+
+    &__name {
+        font-size: 2.5rem;
+        padding: 20px 0 20px 0;
+    }
+
+    &__img {
+        display:block;
+        position: relative;
+
+
+        img {
+            height: 400px;
+            width: 890px;
+        }
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: row;
+        padding: 10px 0 10px 0;
+        align-items: center;
+
+        .rating {
+            padding-right: 10px;
+        }
+
+        .prep-time {
+            border-right: 1px solid #e6e6e6;
+            border-left: 1px solid #e6e6e6;
+            padding: 0 10px 0 10px;
+        }
+
+        .chef {
+            padding-left: 10px;
+
+        }
+
+        img {
+            width: 2.5rem;
+            border-radius: 50%;
+            height: 40px;
+            padding-left: 10px;
+        }
+    
+    }
+
+    &__ingredients {
+        display:flex;
+        flex-direction: row;
+        width: 20%;
+        
     }
 }

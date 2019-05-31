@@ -2,9 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../redux/actions';
 import Recipes from '../components/Recipes';
-import Loading from '../components/Loading';
 import '../styles/styles.scss';
 import { bindActionCreators } from 'redux';
+import Spinner from 'react-spinner-material';
 // import { getRecipes } from '../redux/actions';
 
 
@@ -25,7 +25,7 @@ class RecipesContainer extends React.Component {
         return (
 
             <div className="recipes-container">
-                {this.props.loading ? <Loading /> : 
+                {this.props.loading ? <Spinner size={120} spinnerColor={"#333"} spinnerWidth={2} visible={true} /> : 
                    this.props.recipes.map( (recipe) => <Recipes 
                                                          key={recipe.id} 
                                                          {...recipe}
