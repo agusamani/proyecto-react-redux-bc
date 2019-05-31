@@ -8,13 +8,13 @@ const Home = () => {
     return (
         <div className="home-container">
             <div className="home-title">
-              <h4>Our recipes:</h4>
+              <h1>Our recipes:</h1>
             </div>
               <RecipesContainer />
             <div className="home-title">
-             <h4>Our favorite ingredients:</h4>
+             <h1>Our favorite ingredients:</h1>
             </div>
-             <IngredientsContainer /> {/* Component*/ }
+             <IngredientsContainer />
         </div>
     )
 }

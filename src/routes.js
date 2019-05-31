@@ -1,8 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './components/Home';
-import Recipe from './components/Recipe';
+// import Recipe from './components/Recipe';
 import Ingredient from './components/Ingredient';
+import RecipeContainer from './containers/RecipeContainer';
 
 
 
@@ -12,7 +13,7 @@ const Routes = () => {
       <BrowserRouter>
       <Switch>
           <Route exact path="/" component={Home}/>
-          <Route exact path="/recipes/:id" component={Recipe} />
+          <Route exact path="/recipes/:id" component={RecipeContainer} />
           <Route exact path="/ingredients/:id" component={Ingredient} />
       </Switch>
       </BrowserRouter>

@@ -4,7 +4,7 @@ import {
 } from '../actionTypes';
 
 const initialState = {
-    ingredient:[],
+    ingredient:[]
 }
 
 export default function(state = initialState, action) {
